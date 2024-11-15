@@ -10,7 +10,7 @@ Checking the main condition of a number not being prime (It’s easier to know w
 If the above check fails, the number is a prime, so return True.
 The first part is a simple if statement.
 
-# Deal with special cases
+## Deal with special cases
 if n == 0 or n == 1:
     return False
 We can consider the cases when n is 0 or 1 and return False because these are not considered primes. Since we have a return statement here, if it’s executed (i.e., if n = 0 or n = 1), Python will ignore the rest of the code in this function. This behavior of return statements is essential for the rest of the code.
@@ -19,7 +19,7 @@ But why include this check here? Primes are strictly defined for natural numbers
 
 The next part of the function contains the main piece of code.
 
-# Loop through all numbers between 2 and n - 1, and check if n is NOT prime
+## Loop through all numbers between 2 and n - 1, and check if n is NOT prime
 i = 2
 while i < n:
     if n % i == 0:
@@ -35,7 +35,7 @@ If that occurs, and n is divisible even once, it means n is not prime. (We menti
 
 This next part is just one line, but it works precisely because of that return in the loop.
 
-# If the program reached this point, that means the number is prime
+## If the program reached this point, that means the number is prime
 return True  
 We immediately stop the function whenever we ensure a number is not a prime. So, Python will only ever get to the last line in the function if the number itself is prime. That’s why we’re confident that n is prime and can return True.
 
@@ -73,7 +73,7 @@ Now that we’ve created the function is_prime(), we can use it to find how many
 
 Here, be mindful of the range() function inputs. Consider the range of 100 to 151 inclusive. So, the starting number in range() should be 100. But the end number in range() is not included in the resulting list—instead, the number just before it is considered the last.
 
-# Note the following example to make matters more straightforward. If we write range(2, 5), the resulting list of numbers will be [2, 3, 4] – 5 is not included, and the list ends with 4.
+## Note the following example to make matters more straightforward. If we write range(2, 5), the resulting list of numbers will be [2, 3, 4] – 5 is not included, and the list ends with 4.
 
 So, to include 151 in the list, we should write range(100, 152).
 
